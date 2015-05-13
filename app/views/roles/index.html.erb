@@ -17,7 +17,7 @@
   </thead>
 
   <tbody>
-    <% @roles.each do |role| %>
+    <% @role.each do |role| %>
       <tr>
         <td><%= role.character_name %></td>
         <td><%= role.movie_id %></td>
@@ -28,7 +28,7 @@
           </a>
         </td>
         <td>
-          <a href="/roles/id/edit_form" class="btn btn-warning">
+          <a href="/roles/<%= role.id %>/edit_form" class="btn btn-warning">
             <i class="fa fa-edit"></i>
           </a>
         </td>
@@ -42,4 +42,4 @@
   </tbody>
 </table>
 
-<%= paginate(@roles) %>
+<%= paginate(@role) %>
